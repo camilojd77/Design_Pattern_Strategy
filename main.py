@@ -8,8 +8,8 @@ cambiar el código existente. """
 from envio import CalculoEnvio, EnvioEstandar, EnvioExpress, EnvioPremium
 from pedido import Pedido
 
-pedido = Pedido(destino="México", valorCompra=100.00)
-envio = EnvioExpress()
+pedido = Pedido(destino="Colombia", valorCompra=100.00)
+envio = EnvioPremium()
 costo = envio.calcular_envio(pedido)
 totalPago = costo + pedido.valorCompra
 print(f"Costo de envío: {costo}")

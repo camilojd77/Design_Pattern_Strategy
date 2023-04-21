@@ -29,13 +29,13 @@ class EnvioExpress(CalculoEnvio):
 
     def calcular_envio(self, pedido):
         if pedido.destino == "Colombia":
-            return 10.00
-        elif pedido.destino == "México":
-            return 25.00
-        elif pedido.destino == "Perú":
             return 15.00
-        elif pedido.destino == "Chile":
+        elif pedido.destino == "México":
+            return 30.00
+        elif pedido.destino == "Perú":
             return 20.00
+        elif pedido.destino == "Chile":
+            return 25.00
         else:
             raise ValueError("Destino no válido")
 
@@ -44,12 +44,12 @@ class EnvioPremium(CalculoEnvio):
 
     def calcular_envio(self, pedido):
         if pedido.destino == "Colombia":
-            return 15.00
-        elif pedido.destino == "México":
-            return 30.00
-        elif pedido.destino == "Perú":
-            return 20.00
-        elif pedido.destino == "Chile":
             return 25.00
+        elif pedido.destino == "México":
+            return 40.00
+        elif pedido.destino == "Perú":
+            return 30.00
+        elif pedido.destino == "Chile":
+            return 35.00
         else:
             raise ValueError("Destino no válido")
